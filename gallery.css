@@ -20,3 +20,11 @@
 #title-item {
     text-align: center;
 }
+
+/* navigation bar styles */
+
+#nav-bar {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    height: 30px;
+}
