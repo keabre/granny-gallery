@@ -1,6 +1,10 @@
+/* header styles */
+
 #header {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    background-color: lightskyblue;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 #cart-logo {
