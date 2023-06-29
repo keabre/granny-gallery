@@ -112,6 +112,11 @@ body {
     text-align: center;
 }
 
+.galleryimginfo {
+    display: grid;
+    grid-template-rows: 20% 20% 20% 20%;
+}
+
 /* home page */
 
 #flex-div1 {
