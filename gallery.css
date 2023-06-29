@@ -151,4 +151,14 @@ body {
     font-size: 1.5rem;
 }
 
+/* Originals, prints and greetings cards pages */
 
+.imgflex1 {
+    display: flex;
+    justify-content: center;
+}
+
+.imggrid1 {
+    display: grid;
+    grid-template-columns: 60% 40%;
+}
