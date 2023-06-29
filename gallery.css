@@ -60,3 +60,19 @@ body {
 .nav-button:active {
     background-color: lightgray;
 }
+
+/* main page heading */
+
+.page-heading {
+    background-color: white;
+    padding: 20px 40px 20px 40px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.7rem;
+}
+
+.heading-div {
+    display: flex;
+    justify-content: center;
+}
