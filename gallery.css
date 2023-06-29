@@ -123,6 +123,10 @@ body {
     gap: 3px;
 }
 
+.jsflex > button {
+    height: 60%;
+}
+
 /* home page */
 
 #flex-div1 {
