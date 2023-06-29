@@ -9,20 +9,25 @@ body {
 
 #header {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 20% 60% 20%;
     background-color: lightskyblue;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    border-radius: 10px;
 }
 
 #cart-logo {
-    width: 40px;
-    height: auto;
+    width: auto;
+    height: 40px;
+    margin-right: 5px;
 }
 
 #shopping-cart-item {
     display: flex;
     justify-content: flex-end;
     gap: 10px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    align-items: center;
 }
 
 #shoppingcartlink:visited {
