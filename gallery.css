@@ -190,3 +190,24 @@ body {
     display: grid;
     grid-template-rows: 20% 20% 20% 20%;
 }
+
+/* shopping cart page */
+
+.checkoutflex {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    justify-content: space-around;
+}
+
+#checkoutdisplaydiv {
+    background-color: white;
+    width: 55%;
+    height: 500px;
+}
+
+#checkoutcalculatediv {
+    background-color: white;
+    width: 30%;
+    height: 400px;
+}
