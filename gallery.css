@@ -25,6 +25,14 @@ body {
     gap: 10px;
 }
 
+#shoppingcartlink:visited {
+    color: black;
+}
+
+#shoppingcartlink {
+    text-decoration: none;
+}
+
 #title-item {
     text-align: center;
 }
