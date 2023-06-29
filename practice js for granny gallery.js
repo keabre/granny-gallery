@@ -46,19 +46,19 @@ let ladiesinredimg_price = 90.00;
 let twowhitehensimg_price = 7.50;
 let treebylakeimg_price = 75.00;
 let floweryladyimg_price = 6.00;
-let headbangladyimg_price = 6.00;
+let headbandladyimg_price = 6.00;
 
-let cockerelimg_quant = 7.50;
-let fruitimg_quant = 6.00;
-let redroofhouseimg_quant = 3.00;
-let thatchedroofhouseimg_quant = 3.00;
-let sleepingkittenimg_quant = 5.00;
-let paintedhorseimg_quant = 10.00;
-let sketchedhorseimg_quant = 8.00;
-let mouseonbikeimg_quant = 4.00;
-let mousewithglassesimg_quant = 4.50;
-let twowhitehensimg_quant = 7.50;
-let floweryladyimg_quant = 6.00;
-let headbangladyimg_quant = 6.00;
+let cockerelimg_quant = 10;
+let fruitimg_quant = 10;
+let redroofhouseimg_quant = 10;
+let thatchedroofhouseimg_quant = 10;
+let sleepingkittenimg_quant = 10;
+let paintedhorseimg_quant = 10;
+let sketchedhorseimg_quant = 10;
+let mouseonbikeimg_quant = 10;
+let mousewithglassesimg_quant = 10;
+let twowhitehensimg_quant = 10;
+let floweryladyimg_quant = 10;
+let headbandladyimg_quant = 10;
 
 
