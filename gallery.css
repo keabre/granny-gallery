@@ -88,3 +88,10 @@ body {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(12, 1fr);
 }
+
+.galleryimg {
+    border: 2px double #000;
+    margin: 20px;
+    padding: 5px;
+    background-color: white;
+}
