@@ -158,12 +158,20 @@ body {
 
 /* Originals, prints and greetings cards pages */
 
-.imgflex1 {
+.imgflex {
     display: flex;
     justify-content: center;
+    margin: 40px;
 }
 
-.imggrid1 {
+.imggrid {
     display: grid;
     grid-template-columns: 60% 40%;
+    width: 80%;
+}
+
+.imggrid > img {
+    padding: 20px;
+    border: 1px double #000;
+    background-color: white;
 }
