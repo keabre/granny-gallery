@@ -36,3 +36,19 @@ body {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     height: 30px;
 }
+
+.nav-button {
+    background-color: white;
+    border-radius: 4px;
+    border: 0.1px solid #000;
+    text-align: center;
+    text-decoration: none;
+}
+
+.nav-button:visited {
+    color: black;
+}
+
+.nav-button:active {
+    background-color: lightgray;
+}
