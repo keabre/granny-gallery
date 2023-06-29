@@ -175,3 +175,8 @@ body {
     border: 1px double #000;
     background-color: white;
 }
+
+.gridinimggrid {
+    display: grid;
+    grid-template-rows: 20% 20% 20% 20%;
+}
