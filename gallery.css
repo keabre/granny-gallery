@@ -117,6 +117,12 @@ body {
     grid-template-rows: 20% 20% 20% 20%;
 }
 
+.jsflex {
+    display: flex;
+    flex-direction: row;
+    gap: 3px;
+}
+
 /* home page */
 
 #flex-div1 {

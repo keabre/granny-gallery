@@ -71,7 +71,10 @@
                 <div class="galleryimginfo">
                     <p>Type: print</p>
                     <p>Price: £7.50</p>
-                    <p id="cockerelimg_quant">Quantity: </p>
+                    <div class="jsflex">
+                        <p>Quantity: </p>
+                        <p id="cockerelimg_quant"></p>
+                    </div>
                     <p></p>
                 </div>
             </div>
@@ -82,7 +85,10 @@
                 <div class="galleryimginfo">
                     <p>Type: print</p>
                     <p>Price: £6.00</p>
-                    <p id="fruitimg_quant">Quantity: </p>
+                    <div class="jsflex">
+                        <p>Quantity: </p>
+                        <p id="fruitimg_quant"></p>
+                    </div>
                     <p></p>
                 </div>
             </div>
@@ -93,7 +99,10 @@
                 <div class="galleryimginfo">
                     <p>Type: greetings card</p>
                     <p>Price: £3.00</p>
-                    <p id="redroofhouseimg_quant">Quantity: </p>
+                    <div class="jsflex">
+                        <p>Quantity: </p>
+                        <p id="redroofhouseimg_quant"></p>
+                    </div>
                     <p></p>
                 </div>
             </div>
@@ -104,7 +113,10 @@
                 <div class="galleryimginfo">
                     <p>Type: greetings card</p>
                     <p>Price: £3.00</p>
-                    <p id="thatchedroofhouseimg_quant">Quantity: </p>
+                    <div class="jsflex">
+                        <p>Quantity: </p>
+                        <p id="thatchedroofhouseimg_quant"></p>
+                    </div>
                     <p></p>
                 </div>
             </div>
@@ -126,7 +138,10 @@
                 <div class="galleryimginfo">
                     <p>Type: print</p>
                     <p>Price: £5.00</p>
-                    <p id="sleepingkittenimg_quant">Quantity: </p>
+                    <div class="jsflex">
+                        <p>Quantity: </p>
+                        <p id="sleepingkittenimg_quant"></p>
+                    </div>
                     <p></p>
                 </div>
             </div>
@@ -137,7 +152,10 @@
                 <div class="galleryimginfo">
                     <p>Type: print</p>
                     <p>Price: £10.00</p>
-                    <p id="paintedhorseimg_quant">Quantity: </p>
+                    <div class="jsflex">
+                        <p>Quantity: </p>
+                        <p id="paintedhorseimg_quant"></p>
+                    </div>
                     <p></p>
                 </div>    
             </div>
@@ -148,7 +166,10 @@
                 <div class="galleryimginfo">
                     <p>Type: print</p>
                     <p>Price: £8.00</p>
-                    <p id="sketchedhorseimg_quant">Quantity: </p>
+                    <div class="jsflex">
+                        <p>Quantity: </p>
+                        <p id="sketchedhorseimg_quant"></p>
+                    </div>
                     <p></p>
                 </div>
             </div>
@@ -181,7 +202,10 @@
                 <div class="galleryimginfo">
                     <p>Type: greetings card</p>
                     <p>Price: £4.00</p>
-                    <p id="mouseonbikeimg_quant">Quantity: </p>
+                    <div class="jsflex">
+                        <p>Quantity: </p>
+                        <p id="mouseonbikeimg_quant"></p>
+                    </div>
                     <p></p>
                 </div>
             </div>
@@ -192,7 +216,10 @@
                 <div class="galleryimginfo">
                     <p>Type: greetings card</p>
                     <p>Price: £4.50</p>
-                    <p id="mousewithglassesimg_quant">Quantity: </p>
+                    <div class="jsflex">
+                        <p>Quantity: </p>
+                        <p id="mousewithglassesimg_quant"></p>
+                    </div>
                     <p></p>
                 </div>
             </div>
@@ -214,7 +241,10 @@
                 <div class="galleryimginfo">
                     <p>Type: print</p>
                     <p>Price: £7.50</p>
-                    <p id="twowhitehensimg_quant">Quantity: </p>
+                    <div class="jsflex">
+                        <p>Quantity: </p>
+                        <p id="twowhitehensimg_quant"></p>
+                    </div>
                     <p></p>
                 </div>
             </div>
@@ -236,7 +266,10 @@
                 <div class="galleryimginfo">
                     <p>Type: print</p>
                     <p>Price: £6.00</p>
-                    <p id="floweryladyimg_quant">Quantity: </p>
+                    <div class="jsflex">
+                        <p>Quantity: </p>
+                        <p id="floweryladyimg_quant"></p>
+                    </div>
                     <p></p>
                 </div>
             </div>
@@ -247,14 +280,65 @@
                 <div class="galleryimginfo">
                     <p>Type: print</p>
                     <p>Price: £6.00</p>
-                    <p id="headbandladyimg_quant">Quantity: </p>
+                    <div class="jsflex">
+                        <p>Quantity: </p>
+                        <p id="headbandladyimg_quant"></p>
+                    </div>
                     <p></p>
                 </div>
             </div>
     
 
         </div>
-        <script src="practice js for granny gallery.js">
+        <script>
+            let jscockerelimg_quant = 10;
+            let cockerelimg_quant = document.getElementById("cockerelimg_quant");
+            cockerelimg_quant.textContent = jscockerelimg_quant;
+
+            let jsfruitimg_quant = 10;
+            let fruitimg_quant = document.getElementById("fruitimg_quant");
+            fruitimg_quant.textContent = jsfruitimg_quant;
+
+            let jsredroofhouseimg_quant = 10;
+            let redroofhouseimg_quant = document.getElementById("redroofhouseimg_quant");
+            redroofhouseimg_quant.textContent = jsredroofhouseimg_quant;
+
+            let jsthatchedroofhouseimg_quant = 10;
+            let thatchedroofhouseimg_quant = document.getElementById("thatchedroofhouseimg_quant");
+            thatchedroofhouseimg_quant.textContent = jsthatchedroofhouseimg_quant;
+
+            let jssleepingkittenimg_quant = 10;
+            let sleepingkittenimg_quant = document.getElementById("sleepingkittenimg_quant");
+            sleepingkittenimg_quant.textContent = jssleepingkittenimg_quant;
+
+            let jspaintedhorseimg_quant = 10;
+            let paintedhorseimg_quant = document.getElementById("paintedhorseimg_quant");
+            paintedhorseimg_quant.textContent = jspaintedhorseimg_quant;
+
+            let jssketchedhorseimg_quant = 10;
+            let sketchedhorseimg_quant = document.getElementById("sketchedhorseimg_quant");
+            sketchedhorseimg_quant.textContent = jssketchedhorseimg_quant;
+
+            let jsmouseonbikeimg_quant = 10;
+            let mouseonbikeimg_quant = document.getElementById("mouseonbikeimg_quant");
+            mouseonbikeimg_quant.textContent = jsmouseonbikeimg_quant;
+
+            let jsmousewithglassesimg_quant = 10;
+            let mousewithglassesimg_quant = document.getElementById("mousewithglassesimg_quant");
+            mousewithglassesimg_quant.textContent = jsmousewithglassesimg_quant;
+
+            let jstwowhitehensimg_quant = 10;
+            let twowhitehensimg_quant = document.getElementById("twowhitehensimg_quant");
+            twowhitehensimg_quant.textContent = jstwowhitehensimg_quant;
+
+            let jsfloweryladyimg_quant = 10;
+            let floweryladyimg_quant = document.getElementById("floweryladyimg_quant");
+            floweryladyimg_quant.textContent = jsfloweryladyimg_quant;
+
+            let jsheadbandladyimg_quant = 10;
+            let headbandladyimg_quant = document.getElementById("headbandladyimg_quant");
+            headbandladyimg_quant.textContent = jsheadbandladyimg_quant;
+
         </script>
     </body>
 
