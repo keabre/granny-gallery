@@ -30,6 +30,71 @@ variable names for artwork:
 
 */
 
+/* 
+    'database'
+
+    collection of arrays in an object
+*/
+
+const DatabaseObject = {
+    cockerel: ["cockerel", 7.50, "cockerel-price-text", ""],
+    fruit: ["fruit", 6.00, "fruit-price-text", ""],
+    redroofhouse: ["redroofhouse", 3.00, "redroofhouse-price-text", ""],
+    thatchedroofhouse: ["thatchedroofhouse", 3.00, "thatchedroofhouse-price-text", ""],
+    housewithwindow: ["housewithwindow", 60.00, "housewithwindow-price-text", ""],
+    sleepingkitten: ["sleepingkitten", 5.00, "sleepingkitten-price-text", ""],
+    paintedhorse: ["paintedhorse", 10.00, "paintedhorse-price-text", ""],
+    sketchedhorse: ["sketchedhorse", 8.00, "sketchedhorse-price-text", ""],
+    popart: ["popart", 100.00, "popart-price-text", ""],
+    pottery: ["pottery", 120.00, "pottery-price-text", ""],
+    mouseonbike: ["mouseonbike", 4.00, "mouseonbike-price-text", ""],
+    mousewithglasses: ["mousewithglasses", 4.50, "mousewithglasses-price-text", ""],
+    ladiesinred: ["ladiesinred", 90.00, "ladiesinred-price-text", ""],
+    twowhitehens: ["twowhitehens", 7.50, "twowhitehens-price-text", ""],
+    treebylake: ["treebylake", 75.00, "treebylake-price-text", ""],
+    flowerylady: ["flowerylady", 6.00, "flowerylady-price-text", ""],
+    headbandlady: ["headbandlady", 6.00, "headbandlady-price-text", ""]
+}
+
+/* 
+    object for instances of objects for images and their respective information (name, price, id, type)
+
+    let ImgObject = {
+        this.imgname: imgname,
+        this.imgprice: imgprice,
+        this.imgid: imgid,
+        this.imgtype: imgtype
+
+    }
+*/
+
+/* 
+    list of instances of objects for images 
+
+    some kind of loop using a constructor to append objects to an array
+
+    constructor:
+
+    function createImgObject(imgname, imgprice, imgid, imgtype) {
+        const obj = {};
+        obj.imgname = imgname;
+        obj.imgprice = imgprice;
+        obj.imgid = imgid;
+        obj.imgtype = imgtype;
+        obj.AllocateImgPrice = function () {
+            let `${this.imgname}+_img_price` = this.imgprice;
+            const `${this.imgname}+Price` = document.querySelector('#this.imgid');
+            `${this.imgname}+Price`.textContent += `${this.imgname}+_img_price`;
+        };
+        return obj;
+    }
+
+
+
+
+*/
+
+
 
 /* 
 
@@ -50,15 +115,15 @@ const cockerelImgPrice = document.querySelector('#cockerel-img-price');
 cockerelImgPrice.textContent += cockerelimg_price;
 
 let fruitimg_price = 6.00;
-const theFruitImgPrice = document.querySelector('#fruit-img-price');
-theFruitImgPrice.textContent += fruitimg_price;
+const fruitImgPrice = document.querySelector('#fruit-img-price');
+fruitImgPrice.textContent += fruitimg_price;
 
 let redroofhouseimg_price = 3.00;
-const theRedRoofHouseImgPrice = document.querySelector('#house-with-point-img-price');
-theRedRoofHouseImgPrice.textContent += redroofhouseimg_price;
+const redRoofHouseImgPrice = document.querySelector('#house-with-point-img-price');
+redRoofHouseImgPrice.textContent += redroofhouseimg_price;
 
 let thatchedroofhouseimg_price = 3.00;
-const thatchedRoofHouseImgPrice = document.querySelector('#house-with-thatched-roof-img-price')
+const thatchedRoofHouseImgPrice = document.querySelector('#house-with-thatched-roof-img-price');
 thatchedRoofHouseImgPrice.textContent += thatchedroofhouseimg_price;
 
 let housewithwindowimg_price = 60.00;
