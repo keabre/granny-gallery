@@ -30,29 +30,88 @@ variable names for artwork:
 
 */
 
+
+/* 
+
+    prospective function for js img price allocation
+
+    function AllocateImgPrices(nameofimg, imgprice, imgpricetextid) {
+        let `${nameofimg}+_img_price` = imgprice;
+        const `${nameofimg}+Price` = document.querySelector('#imgpricetextid');
+        `${nameofimg}+Price`.textContent += `${nameofimg}+_img_price`;
+    }
+
+    this function is used alongside a list of objects
+
+*/
+
 let cockerelimg_price = 7.50;
-const theCockerelPrice = document.querySelector('#cockerel-img-price');
-theCockerelPrice.textContent += cockerelimg_price;
+const cockerelImgPrice = document.querySelector('#cockerel-img-price');
+cockerelImgPrice.textContent += cockerelimg_price;
 
 let fruitimg_price = 6.00;
 const theFruitImgPrice = document.querySelector('#fruit-img-price');
 theFruitImgPrice.textContent += fruitimg_price;
 
 let redroofhouseimg_price = 3.00;
+const theRedRoofHouseImgPrice = document.querySelector('#house-with-point-img-price');
+theRedRoofHouseImgPrice.textContent += redroofhouseimg_price;
+
 let thatchedroofhouseimg_price = 3.00;
+const thatchedRoofHouseImgPrice = document.querySelector('#house-with-thatched-roof-img-price')
+thatchedRoofHouseImgPrice.textContent += thatchedroofhouseimg_price;
+
 let housewithwindowimg_price = 60.00;
+const houseWithWindowImgPrice = document.querySelector('#house-with-window-img-price');
+houseWithWindowImgPrice.textContent += housewithwindowimg_price;
+
 let sleepingkittenimg_price = 5.00;
+const sleepingKittenImgPrice = document.querySelector('#kitten-with-white-crop-img-price');
+sleepingKittenImgPrice.textContent += sleepingkittenimg_price;
+
 let paintedhorseimg_price = 10.00;
+const paintedHorseImgPrice = document.querySelector('#painted-horse-img-price');
+paintedHorseImgPrice.textContent += paintedhorseimg_price;
+
 let sketchedhorseimg_price = 8.00;
+const sketchedHorseImgPrice = document.querySelector('#pencil-drawn-horse-img-price');
+sketchedHorseImgPrice.textContent += sketchedhorseimg_price;
+
 let popartimg_price = 100.00;
+const popartImgPrice = document.querySelector('#popart-img-price');
+popartImgPrice.textContent += popartimg_price;
+
 let potteryimg_price = 120.00;
+const potteryImgPrice = document.querySelector('#pottery-img-price');
+potteryImgPrice.textContent += potteryimg_price;
+
 let mouseonbikeimg_price = 4.00;
+const mouseOnBikeImgPrice = document.querySelector('#rat-on-bike-img-price');
+mouseOnBikeImgPrice.textContent += mouseonbikeimg_price;
+
 let mousewithglassesimg_price = 4.50;
+const mouseWithGlassesImgPrice = document.querySelector('#rat-with-glasses-img-price')
+mouseWithGlassesImgPrice.textContent += mousewithglassesimg_price;
+
 let ladiesinredimg_price = 90.00;
+const ladiesInRedImgPrice = document.querySelector('#two-ladies-dressed-in-red-img-price')
+ladiesInRedImgPrice.textContent += ladiesinredimg_price;
+
 let twowhitehensimg_price = 7.50;
+const twoWhiteHensImgPrice = document.querySelector('#two-white-hens-img-price');
+twoWhiteHensImgPrice.textContent += twowhitehensimg_price;
+
 let treebylakeimg_price = 75.00;
+const treeByLakeImgPrice = document.querySelector('#whispy-tree-img-price');
+treeByLakeImgPrice.textContent += treebylakeimg_price;
+
 let floweryladyimg_price = 6.00;
+const floweryLadyImgPrice = document.querySelector('#woman-with-flowers-in-hair-img-price');
+floweryLadyImgPrice.textContent += floweryladyimg_price;
+
 let headbandladyimg_price = 6.00;
+const headbandLadyImgPrice = document.querySelector('#woman-with-headband-img-price');
+headbandLadyImgPrice.textContent += headbandladyimg_price;
 
 
 let jscockerelimg_quant = 10;
