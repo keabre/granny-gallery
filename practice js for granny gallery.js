@@ -36,7 +36,7 @@ variable names for artwork:
     collection of arrays in an object
 */
 
-let DatabaseObject = {
+let DatabaseObject = { // this is also the same as the specific database of the gallery
     cockerel: ["cockerel", 7.50, "cockerel-price-text", "Print", 10, "cockerel-quant-text", "cockerel-type-text"],
     fruit: ["fruit", 6.00, "fruit-price-text", "Print", 10, "fruit-quant-text", "fruit-type-text"],
     redroofhouse: ["redroofhouse", 3.00, "redroofhouse-price-text", "Greetings Card", 10, "redroofhouse-quant-text", "redroofhouse-type-text"],
@@ -56,27 +56,7 @@ let DatabaseObject = {
     headbandlady: ["headbandlady", 6.00, "headbandlady-price-text", "Print", 10, "headbandlady-quant-text", "headbandlady-type-text"]
 }
 
-/* 
-    list of instances of objects for images 
 
-    some kind of loop using a constructor to append objects to an array
-
-    constructor:
-
-    function createImgObject(imgname, imgprice, imgid, imgtype) {
-        const obj = {};
-        obj.imgname = imgname;
-        obj.imgprice = imgprice;
-        obj.imgid = imgid;
-        obj.imgtype = imgtype;
-        obj.AllocateImgPrice = function () {
-            let `${this.imgname}+_img_price` = this.imgprice;
-            const `${this.imgname}+Price` = document.querySelector('#this.imgid');
-            `${this.imgname}+Price`.textContent += `${this.imgname}+_img_price`;
-        };
-        return obj;
-    }
-*/
 
 
 function createImgObject(imgname, imgprice, imgpriceid, imgtype, imgquant, imgquantid, imgtypeid) {
@@ -91,7 +71,7 @@ function createImgObject(imgname, imgprice, imgpriceid, imgtype, imgquant, imgqu
     obj.AllocateImgPrice = function () {
         let imageprice = `${this.imgprice}`;
         let SelectedImgPriceId;
-        let priceidtext = '#'.concat(this.imgpriceid);
+        let priceidtext = '.'.concat(this.imgpriceid);
         SelectedImgPriceId = document.querySelector(priceidtext);
         SelectedImgPriceId.textContent += imageprice;
         
@@ -99,14 +79,14 @@ function createImgObject(imgname, imgprice, imgpriceid, imgtype, imgquant, imgqu
     obj.AllocateImgQuant = function () {
         let imagequant = `${this.imgquant}`;
         let SelectedImgQuantId;
-        let quantidtext = '#'.concat(this.imgquantid);
+        let quantidtext = '.'.concat(this.imgquantid);
         SelectedImgQuantId = document.querySelector(quantidtext);
         SelectedImgQuantId.textContent += imagequant;
     };
     obj.AllocateImgType = function () {
         let imagetype = `${this.imgtype}`;
         let SelectedImgTypeId;
-        let typeidtext = '#'.concat(this.imgtypeid);
+        let typeidtext = '.'.concat(this.imgtypeid);
         SelectedImgTypeId = document.querySelector(typeidtext);
         SelectedImgTypeId.textContent += imagetype;
     };
@@ -116,14 +96,19 @@ let ImgObjectList = [];
 
 for (let picture in DatabaseObject){
     let object = createImgObject(DatabaseObject[picture][0], DatabaseObject[picture][1], DatabaseObject[picture][2], DatabaseObject[picture][3], DatabaseObject[picture][4], DatabaseObject[picture][5], DatabaseObject[picture][6]);
-    ImgObjectList.push(object);
+    ImgObjectList.push(object);      
 }
 
+
+
+
 for (let i = 0; i < ImgObjectList.length; i++) {
-    ImgObjectList[i].AllocateImgPrice();
-    ImgObjectList[i].AllocateImgType();
-    ImgObjectList[i].AllocateImgQuant();
-}
+        ImgObjectList[i].AllocateImgPrice();
+        ImgObjectList[i].AllocateImgType();
+        ImgObjectList[i].AllocateImgQuant();
+    
+    }   
+
 
 
 // shopping cart
@@ -152,12 +137,17 @@ if firstvalue occupied, then,
 // this below is finding the id value of type text of any picture with a buy button such that when someone adds picture to cart, we can idenitify what was bought.
 let buyButton = document.querySelectorAll('.buy-button')
 buyButton.forEach(el => el.addEventListener('click', (event) => {
-    let typetextidfinder = event.target.parentNode.parentNode.parentNode.firstElementChild.getAttribute('id');
-    console.log(typetextidfinder);
-    for (const picture in DatabaseObject) {
+    let typetextidfinder = event.target.parentNode.parentNode.parentNode.firstElementChild.getAttribute('class');
+    console.log(`this is the id of the type text tag: ${typetextidfinder}`);
+    for (let picture in DatabaseObject) {
         if (typetextidfinder == DatabaseObject[picture][6]) {
-            arraymatchedtobuybuttonpressed = DatabaseObject[picture];
-            console.log(arraymatchedtobuybuttonpressed);
+            let picturePrice = DatabaseObject[picture][1];
+            console.log(picturePrice.toString());
+            
+            console.log('this is the price of the image:'.concat(picturePrice));
+            
+            let checkoutCalculateBoxSelector = document.getElementsByClassName('.checkoutcalculatevalue');
+            checkoutCalculateBoxSelector.textContent += picturePrice;
             break;
         } else {
             console.log("false");
