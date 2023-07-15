@@ -37,23 +37,23 @@ variable names for artwork:
 */
 
 let DatabaseObject = {
-    cockerel: ["cockerel", 7.50, "cockerel-price-text", "print", 10, "cockerel-quant-text"],
-    fruit: ["fruit", 6.00, "fruit-price-text", "print", 10, "fruit-quant-text"],
-    redroofhouse: ["redroofhouse", 3.00, "redroofhouse-price-text", "greetings card", 10, "redroofhouse-quant-text"],
-    thatchedroofhouse: ["thatchedroofhouse", 3.00, "thatchedroofhouse-price-text", "greetings card", 10, "thatchedroofhouse-quant-text"],
-    housewithwindow: ["housewithwindow", 60.00, "housewithwindow-price-text", "original", 1, "housewithwindow-quant-text"],
-    sleepingkitten: ["sleepingkitten", 5.00, "sleepingkitten-price-text", "print", 10, "sleepingkitten-quant-text"],
-    paintedhorse: ["paintedhorse", 10.00, "paintedhorse-price-text", "print", 10, "paintedhorse-quant-text"],
-    sketchedhorse: ["sketchedhorse", 8.00, "sketchedhorse-price-text", "print", 10, "sketchedhorse-quant-text"], 
-    popart: ["popart", 100.00, "popart-price-text", "original", 1, "popart-quant-text"],
-    pottery: ["pottery", 120.00, "pottery-price-text", "original", 1, "pottery-quant-text"],
-    mouseonbike: ["mouseonbike", 4.00, "mouseonbike-price-text", "greetings card", 10, "mouseonbike-quant-text"],
-    mousewithglasses: ["mousewithglasses", 4.50, "mousewithglasses-price-text", "greetings card", 10, "mousewithglasses-quant-text"],
-    ladiesinred: ["ladiesinred", 90.00, "ladiesinred-price-text", "original", 1, "ladiesinred-quant-text"],
-    twowhitehens: ["twowhitehens", 7.50, "twowhitehens-price-text", "print", 10, "twowhitehens-quant-text"],
-    treebylake: ["treebylake", 75.00, "treebylake-price-text", "original", 1, "treebylake-quant-text"],
-    flowerylady: ["flowerylady", 6.00, "flowerylady-price-text", "print", 10, "flowerylady-quant-text"],
-    headbandlady: ["headbandlady", 6.00, "headbandlady-price-text", "print", 10, "headbandlady-quant-text"]
+    cockerel: ["cockerel", 7.50, "cockerel-price-text", "Print", 10, "cockerel-quant-text", "cockerel-type-text"],
+    fruit: ["fruit", 6.00, "fruit-price-text", "Print", 10, "fruit-quant-text", "fruit-type-text"],
+    redroofhouse: ["redroofhouse", 3.00, "redroofhouse-price-text", "Greetings Card", 10, "redroofhouse-quant-text", "redroofhouse-type-text"],
+    thatchedroofhouse: ["thatchedroofhouse", 3.00, "thatchedroofhouse-price-text", "Greetings Card", 10, "thatchedroofhouse-quant-text", "thatchedroofhouse-type-text"],
+    housewithwindow: ["housewithwindow", 60.00, "housewithwindow-price-text", "Original", 1, "housewithwindow-quant-text", "housewithwindow-type-text",],
+    sleepingkitten: ["sleepingkitten", 5.00, "sleepingkitten-price-text", "Print", 10, "sleepingkitten-quant-text", "sleepingkitten-type-text"],
+    paintedhorse: ["paintedhorse", 10.00, "paintedhorse-price-text", "Print", 10, "paintedhorse-quant-text", "paintedhorse-type-text"],
+    sketchedhorse: ["sketchedhorse", 8.00, "sketchedhorse-price-text", "Print", 10, "sketchedhorse-quant-text", "sketchedhorse-type-text"], 
+    popart: ["popart", 100.00, "popart-price-text", "Original", 1, "popart-quant-text", "popart-type-text"],
+    pottery: ["pottery", 120.00, "pottery-price-text", "Original", 1, "pottery-quant-text", "pottery-type-text"],
+    mouseonbike: ["mouseonbike", 4.00, "mouseonbike-price-text", "Greetings Card", 10, "mouseonbike-quant-text", "mouseonbike-type-text"],
+    mousewithglasses: ["mousewithglasses", 4.50, "mousewithglasses-price-text", "Greetings Card", 10, "mousewithglasses-quant-text", "mousewithglasses-type-text"],
+    ladiesinred: ["ladiesinred", 90.00, "ladiesinred-price-text", "Original", 1, "ladiesinred-quant-text", "ladiesinred-type-text"],
+    twowhitehens: ["twowhitehens", 7.50, "twowhitehens-price-text", "Print", 10, "twowhitehens-quant-text", "twowhitehens-type-text"],
+    treebylake: ["treebylake", 75.00, "treebylake-price-text", "Original", 1, "treebylake-quant-text", "treebylake-type-text"],
+    flowerylady: ["flowerylady", 6.00, "flowerylady-price-text", "Print", 10, "flowerylady-quant-text", "flowerylady-type-text"],
+    headbandlady: ["headbandlady", 6.00, "headbandlady-price-text", "Print", 10, "headbandlady-quant-text", "headbandlady-type-text"]
 }
 
 /* 
@@ -79,8 +79,9 @@ let DatabaseObject = {
 */
 
 
-function createImgObject(imgname, imgprice, imgpriceid, imgtype, imgquant, imgquantid) {
+function createImgObject(imgname, imgprice, imgpriceid, imgtype, imgquant, imgquantid, imgtypeid) {
     let obj = {};
+    obj.imgtypeid = imgtypeid;
     obj.imgquant = imgquant;
     obj.imgquantid = imgquantid;
     obj.imgname = imgname;
@@ -101,20 +102,57 @@ function createImgObject(imgname, imgprice, imgpriceid, imgtype, imgquant, imgqu
         let quantidtext = '#'.concat(this.imgquantid);
         SelectedImgQuantId = document.querySelector(quantidtext);
         SelectedImgQuantId.textContent += imagequant;
-    }
+    };
+    obj.AllocateImgType = function () {
+        let imagetype = `${this.imgtype}`;
+        let SelectedImgTypeId;
+        let typeidtext = '#'.concat(this.imgtypeid);
+        SelectedImgTypeId = document.querySelector(typeidtext);
+        SelectedImgTypeId.textContent += imagetype;
+    };
     return obj;
 }
 let ImgObjectList = [];
 
 for (let picture in DatabaseObject){
-    let object = createImgObject(DatabaseObject[picture][0], DatabaseObject[picture][1], DatabaseObject[picture][2], DatabaseObject[picture][3], DatabaseObject[picture][4], DatabaseObject[picture][5]);
+    let object = createImgObject(DatabaseObject[picture][0], DatabaseObject[picture][1], DatabaseObject[picture][2], DatabaseObject[picture][3], DatabaseObject[picture][4], DatabaseObject[picture][5], DatabaseObject[picture][6]);
     ImgObjectList.push(object);
 }
 
 for (let i = 0; i < ImgObjectList.length; i++) {
     ImgObjectList[i].AllocateImgPrice();
+    ImgObjectList[i].AllocateImgType();
     ImgObjectList[i].AllocateImgQuant();
 }
 
 
+// shopping cart
+
+/* 
+if we have an array of items, that user bought, they length of the array can show how many p tags need to be created
+
+user selects 4 items (as an example) [we detect this using event listeners]
+-each item appending to a list that holds on user chose picture (accessed through the database object)
+-a for loop creating p tags to amount of things in user chosen list
+-another for loop appending text content for price, quantity, name, other info to relevant places 
+
+
+
+
+
+if firstvalue occupied, then,
+    select second value
+    
+*/
+
+
+// if () {}
+
+
+// this below is finding the id value of type text of any picture with a buy button such that when someone adds picture to cart, we can idenitify what was bought.
+let buyButton = document.querySelectorAll('.buy-button')
+buyButton.forEach(el => el.addEventListener('click', (event) => {
+    let typetextidfinder = event.target.parentNode.parentNode.parentNode.firstElementChild.getAttribute('id');
+    console.log(typetextidfinder);
+}))
 
