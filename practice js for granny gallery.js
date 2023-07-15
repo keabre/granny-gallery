@@ -154,5 +154,14 @@ let buyButton = document.querySelectorAll('.buy-button')
 buyButton.forEach(el => el.addEventListener('click', (event) => {
     let typetextidfinder = event.target.parentNode.parentNode.parentNode.firstElementChild.getAttribute('id');
     console.log(typetextidfinder);
+    for (const picture in DatabaseObject) {
+        if (typetextidfinder == DatabaseObject[picture][6]) {
+            arraymatchedtobuybuttonpressed = DatabaseObject[picture];
+            console.log(arraymatchedtobuybuttonpressed);
+            break;
+        } else {
+            console.log("false");
+        }
+    }
 }))
 
